@@ -11,7 +11,7 @@ const useFecth = () => {
     try {
       const { data } = await axios.get(`https://api.quotable.io/${path}`);
 
-      console.log('data', data);
+      // console.log('data', data);
       applyData(data);
     } catch (error) {
       setError(error.message || 'Something went wrong!');

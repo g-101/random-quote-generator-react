@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import useFecth from '../hooks/useFecth';
 import RandomQuote from '../components/RandomQuote';
 
@@ -18,7 +17,6 @@ const HomePage = () => {
   };
 
   useEffect(() => {
-    console.log('useffect running');
     fetchNewQuote();
   }, []);
 

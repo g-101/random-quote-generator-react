@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const RandomQuote = props => {
   return (
     <div>
       {props.quote.content}
-      {<a href="#">{props.quote.author}</a>}
+      {<Link to={`/quotes?author=${props.quote.author}`}>{props.quote.author}</Link>}
     </div>
   );
 };

@@ -35,9 +35,9 @@ const HomePage = () => {
   }
   return (
     <>
-      <div>
+      <header>
         <button onClick={fetchNewQuote}>Random</button>
-      </div>
+      </header>
       <section>{content}</section>
     </>
   );

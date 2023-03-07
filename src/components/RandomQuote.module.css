@@ -1,0 +1,44 @@
+.random-quote {
+  width: 80%;
+  margin: 10rem auto;
+}
+
+.random-quote .quote {
+  border-left: 2px solid #f7df94;
+}
+
+.random-quote .quote p {
+  font-size: 1.25rem;
+  padding: 2rem;
+  font-weight: 500;
+}
+
+.random-quote .author {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
+}
+
+.random-quote .author:hover {
+  background-color: #333333;
+  color: rgb(250, 252, 255);
+  cursor: pointer;
+}
+
+.random-quote .author p {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.random-quote .author span {
+  padding: 1rem;
+}
+
+.random-quote a:link,
+.random-quote a:visited,
+.random-quote a:hover,
+.random-quote a:active {
+  text-decoration: none;
+
+  color: inherit;
+}

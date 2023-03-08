@@ -9,7 +9,6 @@ const Quotes = () => {
   let query = useQuery();
 
   useEffect(() => {
-    console.log('useffect running');
     const transformedQuotes = quotesObj => {
       let loadedQuotes = [];
 

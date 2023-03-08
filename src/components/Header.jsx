@@ -6,6 +6,7 @@ const Header = () => {
   function refreshPage() {
     useNavigate('/');
   }
+
   return (
     <header className={styles.header}>
       <div>

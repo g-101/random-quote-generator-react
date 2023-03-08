@@ -39,7 +39,6 @@
 .random-quote a:hover,
 .random-quote a:active {
   text-decoration: none;
-
   color: inherit;
 }
 

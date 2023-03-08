@@ -4,14 +4,10 @@ import RandomQuote from '../components/RandomQuote';
 
 const HomePage = () => {
   const [quote, setQuote] = useState(null);
-  const [reload, setReload] = useState(false);
   const { isLoading, error, sendRequest: fetchRandomQuote } = useFecth();
 
   useEffect(() => {
     const transformedQuotes = quotesObj => {
-      const loadedQuotes = [];
-
-      loadedQuotes.push({ id: quotesObj['_id'], content: quotesObj.content });
       setQuote({ id: quotesObj['_id'], content: quotesObj.content, author: quotesObj.author });
     };
     fetchRandomQuote('random', transformedQuotes);

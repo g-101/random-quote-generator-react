@@ -3,11 +3,6 @@ import Root from './pages/Root';
 import HomePage from './pages/HomePage';
 import Quotes from './pages/Quotes';
 
-// const router = createBrowserRouter([
-//   { path: '/', element: <HomePage /> },
-//   { path: '/quotes', element: <Quotes /> },
-// ]);
-
 const router = createBrowserRouter([
   {
     path: '/',
@@ -20,8 +15,6 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  console.log('app running');
-
   return <RouterProvider router={router} />;
 }
 

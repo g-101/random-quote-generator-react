@@ -18,6 +18,5 @@
 .header a:hover,
 .header a:active {
   text-decoration: none;
-
   color: inherit;
 }

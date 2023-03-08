@@ -8,7 +8,8 @@ const Quotes = () => {
   const { isLoading, error, sendRequest: fetchQuotes } = useFecth();
   let query = useQuery();
 
-  const fetchQuotesByAuthor = () => {
+  useEffect(() => {
+    console.log('useffect running');
     const transformedQuotes = quotesObj => {
       let loadedQuotes = [];
 
@@ -19,11 +20,6 @@ const Quotes = () => {
     };
 
     fetchQuotes(`quotes?author=${query.get('author')}`, transformedQuotes);
-  };
-
-  useEffect(() => {
-    console.log('useffect running');
-    fetchQuotesByAuthor();
   }, []);
 
   if (quotes.length) {

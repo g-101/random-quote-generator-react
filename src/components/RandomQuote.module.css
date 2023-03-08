@@ -15,8 +15,12 @@
 
 .random-quote .author {
   display: flex;
-  padding: 2rem;
+  padding: 1rem;
   justify-content: space-between;
+}
+
+.random-quote .author span {
+  padding: 1rem;
 }
 
 .random-quote .author:hover {
@@ -30,10 +34,6 @@
   font-weight: 700;
 }
 
-.random-quote .author span {
-  padding: 1rem;
-}
-
 .random-quote a:link,
 .random-quote a:visited,
 .random-quote a:hover,
@@ -41,4 +41,22 @@
   text-decoration: none;
 
   color: inherit;
+}
+
+@media (min-width: 640px) {
+  .random-quote {
+    width: 50%;
+  }
+
+  .quotes-author .quote p {
+    font-size: 2.25rem;
+  }
+
+  .random-quote .author p {
+    font-size: 1.5rem;
+  }
+
+  .random-quote .author span {
+    padding: 2rem;
+  }
 }

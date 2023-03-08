@@ -10,10 +10,9 @@ const RandomQuote = props => {
       </div>
       <Link to={`/quotes?author=${props.quote.author}`} className={styles.author}>
         <p>{props.quote.author}</p>
-        <span to={`/quotes?author=${props.quote.author}`} className="material-symbols-outlined">
+        <span to={`/quotes?author=${props.quote.author}`} className="material-symbols-outlined md-24">
           arrow_right_alt
         </span>
-        {/* <span className="material-symbols-outlined">autorenew</span> */}
       </Link>
     </div>
   );

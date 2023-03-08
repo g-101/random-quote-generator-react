@@ -1,0 +1,23 @@
+.header div {
+  position: relative;
+  left: 30%;
+  padding: 1rem;
+  display: flex;
+  gap: 0.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.header a {
+  text-decoration: none;
+  font-size: 1.125rem;
+}
+
+.header a:link,
+.header a:visited,
+.header a:hover,
+.header a:active {
+  text-decoration: none;
+
+  color: inherit;
+}

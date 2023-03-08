@@ -6,7 +6,7 @@ const HomePage = () => {
   const [quote, setQuote] = useState(null);
   const { isLoading, error, sendRequest: fetchRandomQuote } = useFecth();
 
-  const fetchNewQuote = () => {
+  useEffect(() => {
     const transformedQuotes = quotesObj => {
       const loadedQuotes = [];
 
@@ -14,10 +14,6 @@ const HomePage = () => {
       setQuote({ id: quotesObj['_id'], content: quotesObj.content, author: quotesObj.author });
     };
     fetchRandomQuote('random', transformedQuotes);
-  };
-
-  useEffect(() => {
-    fetchNewQuote();
   }, []);
 
   let content = <p>Found no movies.</p>;
@@ -33,14 +29,7 @@ const HomePage = () => {
   if (isLoading) {
     content = <p>Loading...</p>;
   }
-  return (
-    <>
-      <header>
-        <button onClick={fetchNewQuote}>Random</button>
-      </header>
-      <section>{content}</section>
-    </>
-  );
+  return <section>{content}</section>;
 };
 
 export default HomePage;

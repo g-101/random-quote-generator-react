@@ -4,6 +4,7 @@ import RandomQuote from '../components/RandomQuote';
 
 const HomePage = () => {
   const [quote, setQuote] = useState(null);
+  const [reload, setReload] = useState(false);
   const { isLoading, error, sendRequest: fetchRandomQuote } = useFecth();
 
   useEffect(() => {

@@ -1,13 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './Header.module.css';
 
 const Header = () => {
+  function refreshPage() {
+    useNavigate('/');
+  }
   return (
     <header className={styles.header}>
       <div>
-        <Link to="/">random</Link>
-        <span className="material-symbols-outlined">autorenew</span>
+        <Link to="/" onClick={refreshPage}>
+          random
+        </Link>
+        <Link to="/" onClick={refreshPage} className="material-symbols-outlined">
+          autorenew
+        </Link>
       </div>
     </header>
   );

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import useFecth from '../hooks/useFecth';
 import RandomQuote from '../components/RandomQuote';
+import Loader from '../components/Loader';
 
 const HomePage = () => {
   const [quote, setQuote] = useState(null);
@@ -13,20 +14,13 @@ const HomePage = () => {
     fetchRandomQuote('random', transformedQuotes);
   }, []);
 
-  let content = <p>Found no movies.</p>;
-
-  if (quote) {
-    content = <RandomQuote quote={quote} />;
-  }
-
-  if (error) {
-    content = <p>{error}</p>;
-  }
-
-  if (isLoading) {
-    content = <p>Loading...</p>;
-  }
-  return <section>{content}</section>;
+  return (
+    <section>
+      {isLoading && <Loader />}
+      {error && <p>{error}</p>}
+      {quote && <RandomQuote quote={quote} />}
+    </section>
+  );
 };
 
 export default HomePage;

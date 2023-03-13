@@ -28,3 +28,9 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+.loader {
+  display: flex;
+  justify-content: center;
+  margin: 15rem auto;
+}

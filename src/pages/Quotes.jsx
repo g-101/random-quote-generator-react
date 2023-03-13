@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import useFecth from '../hooks/useFecth';
 import useQuery from '../hooks/useQuery';
 import QuotesByAuthor from '../components/QuotesByAuthor';
+import Loader from '../components/Loader';
 
 const Quotes = () => {
   const [quotes, setQuotes] = useState([]);
@@ -21,17 +22,13 @@ const Quotes = () => {
     fetchQuotes(`quotes?author=${query.get('author')}`, transformedQuotes);
   }, []);
 
-  if (quotes.length) {
-    return <QuotesByAuthor quotes={quotes} />;
-  }
-
-  if (isLoading) {
-    return <p>Loading...</p>;
-  }
-
-  if (error) {
-    return <p>{error}</p>;
-  }
+  return (
+    <section>
+      {isLoading && <Loader />}
+      {error && <p>{error}</p>}
+      {quotes.length > 0 && <QuotesByAuthor quotes={quotes} />}
+    </section>
+  );
 };
 
 export default Quotes;

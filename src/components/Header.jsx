@@ -3,9 +3,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import styles from './Header.module.css';
 
 const Header = () => {
-  function refreshPage() {
+  const refreshPage = () => {
     useNavigate('/');
-  }
+  };
 
   return (
     <header className={styles.header}>

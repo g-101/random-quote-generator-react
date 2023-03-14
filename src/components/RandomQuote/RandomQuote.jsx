@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import QuoteTags from './QuoteTags';
 import styles from './RandomQuote.module.css';
 
 const RandomQuote = props => {
@@ -8,9 +9,14 @@ const RandomQuote = props => {
       <div className={styles.quote}>
         <p>"{props.quote.content}"</p>
       </div>
-      <Link to={`/quotes?author=${props.quote.author}`} className={styles.author}>
-        <p>{props.quote.author}</p>
-        <span className="material-symbols-outlined md-24">arrow_right_alt</span>
+      <Link to={`/quotes?author=${props.quote.author}`}>
+        <div className={styles.author}>
+          <span>
+            <p>{props.quote.author}</p>
+            <QuoteTags tags={props.quote.tags} />
+          </span>
+          <span className="material-symbols-outlined">arrow_right_alt</span>
+        </div>
       </Link>
     </div>
   );

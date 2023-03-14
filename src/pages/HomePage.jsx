@@ -9,7 +9,12 @@ const HomePage = () => {
 
   useEffect(() => {
     const transformedQuotes = quotesObj => {
-      setQuote({ id: quotesObj['_id'], content: quotesObj.content, author: quotesObj.author });
+      setQuote({
+        id: quotesObj['_id'],
+        content: quotesObj.content,
+        author: quotesObj.author,
+        tags: quotesObj.tags,
+      });
     };
     fetchRandomQuote('random', transformedQuotes);
   }, []);

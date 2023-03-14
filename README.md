@@ -1,4 +1,4 @@
-<h1 align="center">Random Quote Generator</h1>
+<h1 align="center">Random quote generator</h1>
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
  <a href="#-funcionalidades">Funcionalidades</a> •
@@ -9,16 +9,17 @@
 
 ## 💻 Sobre o projeto
 
-Um app que mostra frases aleatórias por autor, buscando essas informações usando a API Quotable.
+Um app que mostra citações aleatórias por autor, buscando essas informações usando a API Quotable.
 
 <a align="center" href="https://random-quote-generator-react-ten.vercel.app/">Acesse o Random Quote</a>
 
 ## ⚙️ Funcionalidades
 
 - [x] Usuário:
-  - [x] Pode ver uma frase randomica.
-  - [x] Gerar uma nova frase.
-  - [x] Clicar no autor e gerar a lista de outras frases desse autor.
+  - [x] Pode ver uma citação aleatória.
+  - [x] Gerar uma nova citação.
+  - [x] Clicar no autor e gerar uma lista de outras citações desse autor.
+  - [x] Consegue visualizar o gênero/os da citação abaixo do nome do autor.
 
 ## 🚀 Como executar o projeto
 
